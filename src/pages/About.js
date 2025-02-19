@@ -143,7 +143,7 @@ export function About() {
           </div>
           {/* ^ End of col-2 */}
         </div>
-        <footer>
+        <footer> 
             < Footer bgColor="#8baac2"/>
         </footer>
         </div>

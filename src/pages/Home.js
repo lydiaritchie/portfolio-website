@@ -23,10 +23,7 @@ export function Home() {
           overflow: "hidden",
         }}
       >
-        <div
-          className="d-flex row justify-content-center name-horizontal"
-          style={{ background: "", marginBottom: "-15px", marginTop: "5px" }}
-        ></div>
+      
 
         <div className="desk-container mx-0">
           <img className="desk-img" src={deskComponent} />
