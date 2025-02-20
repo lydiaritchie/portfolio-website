@@ -68,7 +68,7 @@ function PotteryPortfolio() {
               );
               return (
                 <div key={item.id} className="pot-item">
-                  <div class="loader"></div>
+                  <span class="loader"></span>
                   <img
                     src={item.image}
                     srcSet={`
