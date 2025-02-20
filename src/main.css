@@ -23,7 +23,7 @@ footer {
 }
 
 .navbar-initials {
-  min-width: 100px; 
+  min-width: 100px;
   min-height: 100px;
   display: inline-block;
   padding: 0px !important;
@@ -108,17 +108,6 @@ footer {
   fill: #1f3b5a;
   font-size: 30px;
   font-family: "Arial Narrow", Arial, sans-serif;
-}
-
-.teapot {
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  width: auto; /* Let the width adjust based on height */
-  height: 60px; /* Set a fixed height or adjust as needed */
-  max-width: 100%; /* Ensure it doesn't overflow its container */
-  object-fit: contain; /* Preserve aspect ratio */
-  z-index: 1;
 }
 
 .teapot:hover {
@@ -238,11 +227,11 @@ footer {
   border-right: 3px solid transparent;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
-  position: absolute; 
+  position: absolute;
   top: 50%;
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-  z-index: 10; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
   width: 40px;
   height: 40px;
   border: 4px solid #f3f3f3;
@@ -468,31 +457,6 @@ footer {
 
   .desk {
     width: 100%;
-  }
-
-  .lydia-vertical {
-    transform: scale(6.6);
-    translate: 1350px 380px;
-  }
-
-  .leaf-vase {
-    translate: -2000px 300px;
-  }
-
-  .green-vase {
-    translate: -1280px 300px;
-  }
-
-  .flowers {
-    translate: -2000px 300px;
-  }
-
-  .portfolio-menu {
-    flex-direction: row;
-  }
-
-  .name-horizontal {
-    display: none !important;
   }
 
   .about {

@@ -17,10 +17,10 @@ function DeskComponent() {
       const fetchedBrewResult = await brew("teapot");
       const brewResult = JSON.stringify(fetchedBrewResult);
       setBrewState(brewResult);
-      window.open("about:inspect", "");
+      // window.open("about:inspect", "");
       console.log(brewState);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       setBrewError(`${error.status}: ${error.message}`);
     }
   }
@@ -55,19 +55,13 @@ function DeskComponent() {
         )}
 
         <image
-          className=""
+          className="teapot"
           onClick={handleTeapot}
           transform="translate(4600 1430) scale(0.5)"
           href={teapot}
         />
 
-        {/* <text
-          className="subtitle-2 d-none d-md-block"
-          transform="translate(1200 2400) scale(6) rotate(0) skewX(0)"
-        >
-          Software Engineer, Designer, Artist
-        </text> */}
-        
+
       </svg>
     </div>
   );
