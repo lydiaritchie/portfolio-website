@@ -78,6 +78,7 @@ function DesignPortfolio() {
                       overflow: "hidden", // Prevents the scaled image from overflowing outside its container
                     }}
                   >
+                    <div class="loader"></div>
                     <img
                       src={item.image}
                       srcSet={`
@@ -90,11 +91,16 @@ function DesignPortfolio() {
          800px"
                       alt={item.description}
                       className="design-img"
+                      
                       onClick={() => handleImageClick(flatIndex)}
                       style={{
                         transform: `scale(${item.scale})`,
                         width: "100%",
                         display: "block",
+                      }}
+                      onLoad={(e) => {
+                        // Hide loader when image is loaded
+                        e.target.parentElement.querySelector(".loader").style.display = "none";
                       }}
                     />
                   </div>

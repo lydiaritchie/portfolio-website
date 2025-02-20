@@ -41,7 +41,11 @@ function WebDevPortfolio() {
           <div className="col-12 col-sm-6" key={project.title}>
             <div className="card web-dev-card">
               <div className="card-body">
-                <CardImg src={project.image} />
+              <div class="loader"></div>
+                <CardImg src={project.image} onLoad={(e) => {
+                        // Hide loader when image is loaded
+                        e.target.parentElement.querySelector(".loader").style.display = "none";
+                      }}/>
                 <h5 className="card-title heading-bold mt-2">{project.title}</h5>
                 <div className="link-container">
                   <a

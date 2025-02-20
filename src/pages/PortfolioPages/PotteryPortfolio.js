@@ -73,6 +73,7 @@ function PotteryPortfolio() {
               );
               return (
                 <div key={item.id} className="pot-item">
+                  <div class="loader"></div>
                   <img
                     src={item.image}
                     srcSet={`
@@ -86,6 +87,10 @@ function PotteryPortfolio() {
                     alt={item.description}
                     className="pot-image img-fluid"
                     loading="lazy"
+                    onLoad={(e) => {
+                      // Hide loader when image is loaded
+                      e.target.parentElement.querySelector(".loader").style.display = "none";
+                    }}
                     onClick={() => handleImageClick(flatIndex)}
                   />
                 </div>
