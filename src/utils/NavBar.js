@@ -124,7 +124,7 @@ export function NavBar({ bgColor }) {
 
       <nav
         className="navbar navbar-expand-lg navbar-light d-sm-none d-flex row px-3"
-        style={{ backgroundColor: bgColor }}
+        style={{ backgroundColor: bgColor, overflow: "hidden", width: "100%", margin: "0px" }}
       >
         <button
           className="py-2 p-0 col-1"
@@ -143,7 +143,7 @@ export function NavBar({ bgColor }) {
           ></span>
         </button>
 
-        <div className="col-6" style={{ backgroundColor: "" }}>
+        <div className="col-7" style={{ backgroundColor: "" }}>
           <img
             className=""
             style={{
