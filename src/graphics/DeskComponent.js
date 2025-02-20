@@ -37,8 +37,8 @@ function DeskComponent() {
       >
         <defs>
           <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="1">
-            <stop offset="0%" stop-color="#8baac2" stop-opacity="0" />
-            <stop offset="60%" stop-color="#8baac2" stop-opacity="1" />
+            <stop offset="0%" stopColor="#8baac2" stopOpacity="0" />
+            <stop offset="60%" stopColor="#8baac2" stopOpacity="1" />
           </linearGradient>
         </defs>
         {/* Generator: Adobe Illustrator 29.0.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 186) */}

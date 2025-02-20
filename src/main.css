@@ -26,6 +26,8 @@ footer {
   min-width: 100px; 
   min-height: 100px;
   display: inline-block;
+  padding: 0px !important;
+  margin: 0px !important;
 }
 
 .navbar-icon {
