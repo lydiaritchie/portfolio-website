@@ -63,7 +63,7 @@ function PotteryPortfolio() {
       {Object.entries(potteryData).map(([category, items]) => (
         <div key={category} className="category-section">
           <div id={category}></div>
-          <h4 className="heading-italic mt-4" >
+          <h4 className="heading-italic fw-bold mt-4 mb-3 text-center" >
             {capitalizeCategory(category)}
           </h4>
           <div className="pot-container">

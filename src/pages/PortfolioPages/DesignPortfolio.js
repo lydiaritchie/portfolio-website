@@ -61,7 +61,7 @@ function DesignPortfolio() {
       <div>
         {Object.entries(designData).map(([category, items]) => (
           <div key={category} className="category-section">
-            <h4 className="heading-italic mt-4 mb-2" id={category}>
+            <h4 className="heading-italic fw-bold mt-4 mb-3 text-center" id={category}>
               {capitalizeCategory(category)}
             </h4>
             <div className="design-container">
