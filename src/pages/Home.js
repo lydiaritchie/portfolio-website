@@ -1,31 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavBar } from "../utils/NavBar";
 import DeskComponent from "../graphics/DeskComponent";
 import { Footer } from "../utils/Footer";
-import teapot from "../graphics/home-graphics/blue-teapot.png";
-import { brew } from "../utils/api";
-import deskComponent from "../graphics/DeskComponent.png";
 
 export function Home() {
-  const [brewState, setBrewState] = useState("");
-  const [brewError, setBrewError] = useState("");
 
-  async function handleTeapot() {
-    if (brewError !== "") {
-      setBrewError("");
-      return;
-    }
-    try {
-      const fetchedBrewResult = await brew("teapot");
-      const brewResult = JSON.stringify(fetchedBrewResult);
-      setBrewState(brewResult);
-      window.open("about:inspect", "");
-      console.log(brewState);
-    } catch (error) {
-      console.log(error);
-      setBrewError(`${error.status}: ${error.message}`);
-    }
-  }
   return (
     <div>
       <header>

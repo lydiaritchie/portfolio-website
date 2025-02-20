@@ -69,12 +69,12 @@ footer {
   font-weight: 600;
 }
 
-/*************************************************************** Contact Page *********************** */
+/*************************************************************** Contact Section *********************** */
 
 .contact-btn {
   cursor: pointer;
   color: #91b2cd;
-  margin: 0px 5px 0px 5px;
+  margin: 0px 3px 0px 3px;
 }
 
 .contact-img {
@@ -441,6 +441,12 @@ footer {
 
   .desk {
     width: 100%;
+  }
+
+  .contact-btn {
+    cursor: pointer;
+    color: #91b2cd;
+    margin: 0px 5px 0px 5px;
   }
 }
 
