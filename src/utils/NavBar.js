@@ -143,7 +143,7 @@ export function NavBar({ bgColor }) {
           ></span>
         </button>
 
-        <div className="col-7" style={{ backgroundColor: "" }}>
+        <div className="col-6" style={{ backgroundColor: "" }}>
           <img
             className=""
             style={{
