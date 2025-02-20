@@ -77,12 +77,12 @@ footer {
   margin: 0px 5px 0px 5px;
 }
 
-.contact-img{
+.contact-img {
   fill: #173c5a;
 }
 
 .contact-img:hover {
-  fill:#ffd84a;
+  fill: #ffd84a;
   transition: fill 0.1s ease-in-out;
 }
 
@@ -92,30 +92,21 @@ footer {
   display: flex;
 }
 
-/* .desk-img {
-  background-color: pink;
-  position: absolute;
-  top: 0;
-  right: 0;
-
-} */
-
 .desk-component {
   width: 100%;
-  transform: translate(5px, 45px) scale(1.2);
+  transform: translate(-40px, 120px) scale(1.45);
 }
 
-  .subtitle {
-    font-size: 140px;
-    fill: #1f3b5a;
-  }
+.subtitle {
+  font-size: 140px;
+  fill: #1f3b5a;
+}
 
-  .subtitle-2 {
-    fill: #1f3b5a;
-    font-size: 30px;
-    font-family: "Arial Narrow", Arial, sans-serif;
-  }
-
+.subtitle-2 {
+  fill: #1f3b5a;
+  font-size: 30px;
+  font-family: "Arial Narrow", Arial, sans-serif;
+}
 
 .teapot {
   position: absolute;
@@ -241,7 +232,7 @@ footer {
   height: 48px;
   border-radius: 50%;
   display: inline-block;
-  border-top: 3px solid #FFF;
+  border-top: 3px solid #fff;
   border-right: 3px solid transparent;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
@@ -254,7 +245,7 @@ footer {
   100% {
     transform: rotate(360deg);
   }
-} 
+}
 
 .portfolio-menu {
   flex-direction: column;
@@ -442,24 +433,31 @@ footer {
 /* This is for the home page desk component
    It has a different break point than normal due to the illustraion size */
 
-@media (min-width: 768px) {
-  .desk-container {
+@media (min-width: 576px) {
+  .desk-component {
+    width: 100%;
+    transform: translate(-50px, 70px) scale(1.2);
   }
 
+  .desk {
+    width: 100%;
+  }
+}
+
+@media (min-width: 950px) {
   .desk-component {
     width: 100%;
     transform: translate(0px, 0px) scale(1);
   }
 
-  .desk-img {
-    width: 160%;
+  .desk {
+    width: 100%;
   }
 
   .lydia-vertical {
     transform: scale(6.6);
     translate: 1350px 380px;
   }
-
 
   .leaf-vase {
     translate: -2000px 300px;

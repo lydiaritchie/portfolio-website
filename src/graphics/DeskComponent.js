@@ -30,7 +30,7 @@ function DeskComponent() {
         id="DeskComponent"
         data-name="DeskComponent"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="1000 0 4500 3000"
+        viewBox="600 0 5000 4000"
         className="desk"
         height="100%"
         style={{backgroundColor: ""}}
