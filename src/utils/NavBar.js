@@ -65,12 +65,7 @@ export function NavBar({ bgColor }) {
               aria-label="GitHub Profile"
               title="Visit my Github profile"
             >
-              <img
-                className=""
-                src={githubIcon}
-                alt="Github Icon"
-                width={20}
-              />
+              <img className="" src={githubIcon} alt="Github Icon" width={20} />
             </a>
             <a
               className="contact-btn"
@@ -78,12 +73,7 @@ export function NavBar({ bgColor }) {
               aria-label="Email"
               title="Email me at lydia.g.ritchie@gmail.com"
             >
-              <img
-                className=""
-                src={emailIcon}
-                alt="Email Icon"
-                width={20}
-              />
+              <img className="" src={emailIcon} alt="Email Icon" width={20} />
             </a>
             <a
               className="contact-btn"
@@ -91,23 +81,18 @@ export function NavBar({ bgColor }) {
               aria-label="Instagram Profile"
               title="Visit my Instagram profile"
             >
-              <img
-                className=""
-                src={instaIcon}
-                alt="Insta Icon"
-                width={20}
-              />
+              <img className="" src={instaIcon} alt="Insta Icon" width={20} />
             </a>
           </div>
         </div>
       </nav>
 
       <nav
-        className="navbar navbar-expand-lg navbar-light d-sm-none d-flex col px-3"
+        className="navbar navbar-expand-lg navbar-light d-sm-none d-flex row px-3"
         style={{ backgroundColor: bgColor }}
       >
         <button
-          className="py-2 p-0"
+          className="py-2 p-0 col-1"
           type="button"
           data-toggle="collapse"
           data-target="#smallNavBar"
@@ -117,8 +102,12 @@ export function NavBar({ bgColor }) {
           onClick={toggleMenu}
           style={{ backgroundColor: "transparent", border: "0px" }}
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"  style={{ backgroundColor: "transparent", border: "0px" }}></span>
         </button>
+
+        <div className="col-11" style={{backgroundColor: "",}}>
+          <img className="" style={{width: "15%", backgroundColor: "",  marginLeft: "31vw", marginTop: "1vh"}} src={lydiaRitchieVertical} />
+        </div>
 
         <div
           className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
@@ -136,8 +125,8 @@ export function NavBar({ bgColor }) {
               </a>
             </li>
             <li className="nav-item active">
-              <a className="nav-link" href="/contact">
-                Contact
+              <a className="nav-link" href="/about">
+                About
               </a>
             </li>
           </ul>
