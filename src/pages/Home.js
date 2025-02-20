@@ -1,17 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavBar } from "../utils/NavBar";
 import DeskComponent from "../graphics/DeskComponent";
 import { Footer } from "../utils/Footer";
-import { ReactComponent as LydiaRitchieHorizontal } from "../graphics/personal-branding/lydia-ritchie-horizontal.svg";
-import lydiaHeadshot from "../graphics/personal-branding/lydia-headshot.jpg";
-import illustratorIcon from "../graphics/icons/illustrator-icon.svg";
-import indesignIcon from "../graphics/icons/indesign-icon.svg";
-import lightroomIcon from "../graphics/icons/lightroom-icon.svg";
-import photoshopIcon from "../graphics/icons/photoshop-icon.svg";
-import premiereIcon from "../graphics/icons/premiere-icon.svg";
+import teapot from "../graphics/home-graphics/blue-teapot.png";
+import { brew } from "../utils/api";
 import deskComponent from "../graphics/DeskComponent.png";
 
 export function Home() {
+  const [brewState, setBrewState] = useState("");
+  const [brewError, setBrewError] = useState("");
+
+  async function handleTeapot() {
+    if (brewError !== "") {
+      setBrewError("");
+      return;
+    }
+    try {
+      const fetchedBrewResult = await brew("teapot");
+      const brewResult = JSON.stringify(fetchedBrewResult);
+      setBrewState(brewResult);
+      window.open("about:inspect", "");
+      console.log(brewState);
+    } catch (error) {
+      console.log(error);
+      setBrewError(`${error.status}: ${error.message}`);
+    }
+  }
   return (
     <div>
       <header>
@@ -23,16 +37,13 @@ export function Home() {
           overflow: "hidden",
         }}
       >
-      
+        <div className="desk-container mx-0" style={{ backgroundColor: "" }}>
+          {/* <img className="teapot" onClick={handleTeapot} src={teapot} /> */}
 
-        <div className="desk-container mx-0">
-          <img className="desk-img" src={deskComponent} />
+          <DeskComponent className="desk-img"/>
+          {/* <img className="desk-img" src={deskComponent} /> */}
         </div>
-        <div
-          className="subtitle"
-        >
-          Software Engineer, Designer, Artist
-        </div>
+      
       </div>
 
       <footer>

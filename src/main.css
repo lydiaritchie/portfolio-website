@@ -38,7 +38,7 @@ footer {
 }
 
 .nav-link:hover {
-  color: #FFD84A;
+  color: #ffd84a;
 }
 
 .navbar-toggler-icon {
@@ -81,17 +81,42 @@ footer {
 
 .desk-container {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
 }
 
-.desk-img {
-  width: 160%;
-  padding-right: 90px;
+/* .desk-img {
+  background-color: pink;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+} */
+
+.desk-component {
+  width: 100%;
+  transform: translate(5px, 45px) scale(1.2);
 }
 
-.subtitle {
-  position: relative;
+  .subtitle {
+    font-size: 140px;
+    fill: #1f3b5a;
+  }
+
+  .subtitle-2 {
+    fill: #1f3b5a;
+    font-size: 30px;
+    font-family: "Arial Narrow", Arial, sans-serif;
+  }
+
+
+.teapot {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: auto; /* Let the width adjust based on height */
+  height: 60px; /* Set a fixed height or adjust as needed */
+  max-width: 100%; /* Ensure it doesn't overflow its container */
+  object-fit: contain; /* Preserve aspect ratio */
+  z-index: 1;
 }
 
 .teapot:hover {
@@ -392,14 +417,13 @@ footer {
   .desk-container {
   }
 
-  .desk-img {
-    width: 160%;
+  .desk-component {
+    width: 100%;
+    transform: translate(0px, 30px) scale(1.1);
   }
 
-  .desk {
-    transform: scale(1.4);
-    translate: 60px;
-    margin-top: -30px;
+  .desk-img {
+    width: 160%;
   }
 
   .lydia-vertical {
@@ -407,11 +431,6 @@ footer {
     translate: 1350px 380px;
   }
 
-  .subtitle {
-    font-size: 115px;
-    fill: #425c77;
-    translate: 1400px 1800px;
-  }
 
   .leaf-vase {
     translate: -2000px 300px;
