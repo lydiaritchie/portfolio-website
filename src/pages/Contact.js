@@ -60,7 +60,7 @@ export function Contact() {
             <img
               className="mx-2"
               src={githubIcon}
-              alt="LinkedIn Icon"
+              alt="Github Icon"
               width={20}
             />
             GitHub
@@ -76,7 +76,7 @@ export function Contact() {
             <img
               className="mx-2"
               src={emailIcon}
-              alt="LinkedIn Icon"
+              alt="Email Icon"
               width={20}
             />
             lydia.g.ritchie@gmail.com
@@ -92,7 +92,7 @@ export function Contact() {
             <img
               className="mx-2"
               src={instaIcon}
-              alt="LinkedIn Icon"
+              alt="Insta Icon"
               width={20}
             />
             @lydiaritchieart

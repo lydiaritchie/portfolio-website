@@ -61,7 +61,7 @@ function DesignPortfolio() {
       <div>
         {Object.entries(designData).map(([category, items]) => (
           <div key={category} className="category-section">
-            <h4 className="heading-italic mt-4 mb-2" id={category}>
+            <h4 className="heading-italic fw-bold mt-4 mb-3 text-center" id={category}>
               {capitalizeCategory(category)}
             </h4>
             <div className="design-container">
@@ -78,6 +78,7 @@ function DesignPortfolio() {
                       overflow: "hidden", // Prevents the scaled image from overflowing outside its container
                     }}
                   >
+                    <div class="loader"></div>
                     <img
                       src={item.image}
                       srcSet={`
@@ -90,11 +91,16 @@ function DesignPortfolio() {
          800px"
                       alt={item.description}
                       className="design-img"
+                      
                       onClick={() => handleImageClick(flatIndex)}
                       style={{
                         transform: `scale(${item.scale})`,
                         width: "100%",
                         display: "block",
+                      }}
+                      onLoad={(e) => {
+                        // Hide loader when image is loaded
+                        e.target.parentElement.querySelector(".loader").style.display = "none";
                       }}
                     />
                   </div>

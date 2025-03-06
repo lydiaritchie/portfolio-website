@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Modal, Carousel } from "react-bootstrap";
 import potteryData from "../../utils/data/PotteryData";
 
-
-
 function PotteryPortfolio() {
   const [showModal, setShowModal] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -40,15 +38,12 @@ function PotteryPortfolio() {
 
   return (
     <div>
-       <div className="text-center small design-nav">
-        <a
-          className="design-nav-item"
-          href="#vases"
-        >
+      <div className="text-center small design-nav">
+        <a className="design-nav-item" href="#vases">
           Vases
         </a>
-         /
-        <a className="design-nav-item" href="#mugs" >
+        /
+        <a className="design-nav-item" href="#mugs">
           Mugs
         </a>
         /
@@ -63,7 +58,7 @@ function PotteryPortfolio() {
       {Object.entries(potteryData).map(([category, items]) => (
         <div key={category} className="category-section">
           <div id={category}></div>
-          <h4 className="heading-italic mt-4" >
+          <h4 className="heading-italic fw-bold mt-4 mb-3 text-center">
             {capitalizeCategory(category)}
           </h4>
           <div className="pot-container">
@@ -73,6 +68,7 @@ function PotteryPortfolio() {
               );
               return (
                 <div key={item.id} className="pot-item">
+                  <span class="loader"></span>
                   <img
                     src={item.image}
                     srcSet={`
@@ -86,6 +82,12 @@ function PotteryPortfolio() {
                     alt={item.description}
                     className="pot-image img-fluid"
                     loading="lazy"
+                    onLoad={(e) => {
+                      // Hide loader when image is loaded
+                      e.target.parentElement.querySelector(
+                        ".loader"
+                      ).style.display = "none";
+                    }}
                     onClick={() => handleImageClick(flatIndex)}
                   />
                 </div>
@@ -103,10 +105,9 @@ function PotteryPortfolio() {
         dialogClassName="modal-90w"
         className="90w"
       >
-        
         <Modal.Body className="p-0">
-           {/* Close Button */}
-           <button
+          {/* Close Button */}
+          <button
             variant="link"
             onClick={handleClose}
             style={{

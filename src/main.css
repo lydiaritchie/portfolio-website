@@ -1,16 +1,4 @@
-.navbar-initials {
-  min-width: 80px; /* Adjust as needed */
-  min-height: 70px;
-  display: inline-block;
-}
-
-.navbar-icon {
-  outline-width: 0;
-}
-
-.nav-link {
-  color: #425c77 !important;
-}
+/*************************************************************** Root *********************** */
 
 #root {
   display: flex;
@@ -28,9 +16,38 @@ footer {
   margin-bottom: -30px;
 }
 
+/*************************************************************** NavBar *********************** */
+
+.navbar-custom {
+  background-color: #8baac2;
+}
+
+.navbar-initials {
+  min-width: 100px;
+  min-height: 100px;
+  display: inline-block;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.navbar-icon {
+  outline-width: 0;
+}
+
+.nav-link {
+  color: #ffffff;
+  font-size: 23px;
+}
+
+.nav-link:hover {
+  color: #ffd84a;
+}
+
 .navbar-toggler-icon {
   filter: opacity(0.6);
 }
+
+/*************************************************************** Main Containers *********************** */
 
 .main-container {
   display: flex;
@@ -54,41 +71,50 @@ footer {
   font-weight: 600;
 }
 
+/*************************************************************** Contact Section *********************** */
+
 .contact-btn {
-  border-radius: 30px;
-  border-color: #173c5a;
-  color: #173c5a;
-  margin: 10px 0;
-  word-wrap: break-word;
-  font-size: small;
+  cursor: pointer;
+  color: #91b2cd;
+  margin: 0px 3px 0px 3px;
 }
 
-.contact-container {
-  width: 90%;
-  max-width: none;
+.contact-img {
+  fill: #173c5a;
 }
+
+.contact-img:hover {
+  fill: #ffd84a;
+  transition: fill 0.1s ease-in-out;
+}
+
+/*************************************************************** Desk Styles *********************** */
 
 .desk-container {
-  overflow: hidden;
-  height: auto;
-  width: 100%;
-  padding-bottom: 50%;
-  margin-top: -15px;
+  display: flex;
 }
 
-.desk {
-  transform: translateX(-30px) scale(2);
-  transform-origin: top center;
-  position: relative;
+.desk-component {
   width: 100%;
-  height: auto;
-  object-fit: contain;
-  transition: all 0.2s ease;
+  transform: translate(-40px, 120px) scale(1.45);
+}
+
+.subtitle {
+  font-size: 140px;
+  fill: #1f3b5a;
+}
+
+.subtitle-2 {
+  fill: #1f3b5a;
+  font-size: 30px;
+  font-family: "Arial Narrow", Arial, sans-serif;
 }
 
 .teapot:hover {
   filter: brightness(0.6);
 }
+
+/*************************************************************** About Page *********************** */
 
 .about-title {
   transform: translateX(2600px) translateY(3600px) scale(5.3) rotate(-8deg);
@@ -99,6 +125,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-content: center;
+  padding-bottom: 30px;
   color: #173c5a;
 }
 
@@ -189,6 +216,36 @@ footer {
   margin: 10px 3px 3px 3px;
 }
 
+/*************************************************************** Portfolio Page *********************** */
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #fff;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .portfolio-menu {
   flex-direction: column;
   background-color: #a4c6df;
@@ -196,6 +253,11 @@ footer {
   padding: 8px 8px 8px 8px;
   gap: 3px;
   box-shadow: 0px 0px 5px #7b98ac;
+}
+
+.portfolio-nav-link {
+  text-decoration: none;
+  color: #5a81aa;
 }
 
 .portfolio-btn {
@@ -211,6 +273,8 @@ footer {
   background-color: #b5dbf5;
   box-shadow: 0px 0px 4px rgb(104, 151, 167);
 }
+
+/*************************************************************** Web Dev Portfolio *********************** */
 
 .web-dev-card {
   background-color: rgba(164, 198, 223);
@@ -252,6 +316,7 @@ footer {
   filter: brightness(0.8);
 }
 
+/************************************************** Pottery Portfolio  *********************/
 .pot-container {
   display: flex;
   flex-wrap: wrap;
@@ -263,15 +328,15 @@ footer {
 .pot-item {
   break-inside: avoid;
   flex: 1 1 calc(25% - 20px);
-  max-width: 200px; 
-  min-width: 150px; 
+  max-width: 200px;
+  min-width: 150px;
   max-height: 350px;
   height: 250px;
-  align-self: center; 
+  align-self: center;
 }
 
 .pot-image {
-  width: 100%; 
+  width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 4px;
@@ -281,6 +346,8 @@ footer {
   filter: brightness(0.6);
 }
 
+/*************************************************************** Design Portfolio *********************** */
+
 .design-nav {
   position: sticky;
   top: 0;
@@ -289,7 +356,6 @@ footer {
   padding: 5px;
   color: #425c77;
   overflow: visible;
-  
 }
 
 .design-nav-item {
@@ -324,7 +390,9 @@ footer {
   font-weight: 400;
 }
 
-/* Adjust design portfolio image grid */
+/*************************************************************** MEDIA QUERIES *********************** */
+
+/*************************************************************** Adjust design portfolio image grid *********************** */
 
 @media (min-width: 600px) {
   .design-container {
@@ -333,7 +401,7 @@ footer {
   }
 }
 
-/* Adjust pottery portfolio image grid */
+/*************************************************************** Adjust pottery portfolio image grid *********************** */
 
 @media (min-width: 550px) {
   .pot-container {
@@ -364,53 +432,38 @@ footer {
 /* This is for the home page desk component
    It has a different break point than normal due to the illustraion size */
 
-@media (min-width: 768px) {
-  .desk-container {
-    padding-bottom: 20%;
+@media (min-width: 576px) {
+  .desk-component {
+    width: 100%;
+    transform: translate(-50px, 70px) scale(1.2);
   }
 
   .desk {
-    transform: scale(1.4);
-    translate: 60px;
-    margin-top: -30px;
+    width: 100%;
   }
 
-  .lydia-vertical {
-    transform: scale(6.6);
-    translate: 1350px 380px;
+  .contact-btn {
+    cursor: pointer;
+    color: #91b2cd;
+    margin: 0px 5px 0px 5px;
+  }
+}
+
+@media (min-width: 950px) {
+  .desk-component {
+    width: 100%;
+    transform: translate(0px, 0px) scale(1);
   }
 
-  .subtitle {
-    font-size: 115px;
-    fill: #425c77;
-    translate: 1400px 1800px;
-  }
-
-  .leaf-vase {
-    translate: -2000px 300px;
-  }
-
-  .green-vase {
-    translate: -1280px 300px;
-  }
-
-  .flowers {
-    translate: -2000px 300px;
-  }
-
-  .portfolio-menu {
-    flex-direction: row;
-  }
-
-  .name-horizontal {
-    display: none !important;
+  .desk {
+    width: 100%;
   }
 
   .about {
     z-index: 2;
     display: flex;
     flex-direction: row;
-    margin: -50px 0px 10px 0px;
+    margin: 50px 0px 20px 0px;
     padding: 0px 10px 0px 10px;
   }
 

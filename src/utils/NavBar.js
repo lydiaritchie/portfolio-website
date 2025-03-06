@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import lydiaRitchieVertical from "../graphics/personal-branding/lydia-ritchie-vertical.svg";
 
 export function NavBar({ bgColor }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,35 +10,124 @@ export function NavBar({ bgColor }) {
 
   return (
     <div>
-      <nav
-        className="navbar navbar-expand-sm navbar-light d-none d-sm-block"
-        style={{ background: bgColor }}
-      >
-        <ul className="navbar-nav justify-content-center ">
-          <li className="nav-item px-4">
-            <a className="nav-link" href="/">
-              Home
+      <nav className="navbar navbar-custom navbar-expand-sm navbar-light d-none d-sm-block">
+        <div className="container-fluid px-4">
+          {/* Logo */}
+          <a className="navbar-brand" href="/">
+            <img
+              src={lydiaRitchieVertical}
+              width={70}
+              alt="Lydia Ritchie Logo"
+            />
+          </a>
+
+          {/* Centered Navigation Links */}
+          <ul className="navbar-nav mx-auto">
+            <li className="nav-item px-4">
+              <a className="nav-link" href="/">
+                Home
+              </a>
+            </li>
+            <li className="nav-item px-4">
+              <a className="nav-link" href="/portfolio">
+                Portfolio
+              </a>
+            </li>
+            <li className="nav-item px-4">
+              <a className="nav-link" href="/about">
+                About
+              </a>
+            </li>
+          </ul>
+
+          {/* Contact Buttons */}
+          <div className="d-flex">
+            <a
+              className="contact-btn contact-img"
+              href="https://www.linkedin.com/in/lydia-g-ritchie/"
+              aria-label="LinkedIn Profile"
+              title="Visit my LinkedIn profile"
+            >
+              <svg
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1199.94 1200"
+                alt="LinkedIn Icon"
+                width={30}
+              >
+                <path d="M1080.94,0H118.99v1h0,0c-17.82-1.09-35.43,5.51-50.91,14.03C31.35,35.28.91,75.05,0,118c-.2,1.6.13,3.37,0,5v959c3.69,60.8,57.29,114.22,117.99,118h962.95v-1c17.26,1.45,33.86-4.44,48.94-12.59,38.25-20.67,67.74-60.31,70.06-104.41V119c-2.97-61.34-57.7-116.08-118.99-119ZM362.98,1033h-178.99V456h178.99v577ZM339.45,355.97c-58.37,48.92-148.57,19.12-168.72-53.21-17.13-61.49,24.13-129.22,89.05-135.47,106.83-10.28,160.43,121,79.67,188.68ZM1032.94,1033h-177.99l.04-320.54c-3.83-74.22-41.69-123.55-121.26-110.19-57.32,9.63-81.8,59.61-84.81,113.19l.04,317.54h-171.99V456h171.99v76c5.42-7.07,10.31-14.6,16.02-21.47,55.89-67.28,146.07-87.21,228.96-63.02,92.36,26.96,134.65,108.01,139.04,199.95l-.05,385.55ZM1080.94,1199h0Z" />
+              </svg>
             </a>
-          </li>
-          <li className="nav-item px-4">
-            <a className="nav-link" href="/portfolio">
-              Portfolio
+            <a
+              className="contact-btn contact-img"
+              href="https://github.com/lydiaritchie"
+              aria-label="GitHub Profile"
+              title="Visit my Github profile"
+            >
+              <svg
+                id="github-icon"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 350.44 342.1"
+                alt="Github Icon"
+                width={30}
+              >
+                <path d="M0,164.35C8.54,37.49,146.06-40.15,259.39,21.65c92.6,50.49,119.88,172.13,57.07,257.62-19.06,25.94-52.13,52.63-83.41,61.68-6.26,1.81-11.06,2.3-13.91-4.62-.96-17.11.79-34.87-.11-51.9-.64-12.02-3.12-22.89-11.66-31.79,28.37-2.56,57.84-13.36,70.61-40.61,13.04-27.82,13.73-69.43-8.88-92.6,4.24-11.39,4.39-24.09,1.58-35.84-.42-1.77-2.76-9.85-3.78-10.59-3.44-2.52-14.17,1.02-18.14,2.37-10.49,3.58-20,9.47-29.47,15.07-29.08-7.01-58.52-7.51-87.55.06-14.72-7.93-31.34-19.2-48.83-17.75-5.55,15.29-7.57,31.18-1.6,46.69-20.89,21.58-21.51,56.68-12.37,83.77,11.55,34.22,40.44,45.78,74.1,49.77-6.81,6.38-9.3,14.87-11.39,23.67-14,5.34-29.61,7.09-41.62-3.5-7.1-6.25-10.04-15.69-17.83-21.86-6.13-4.86-18.23-10.81-25.35-5.49-2.03,3.83,8.65,9.68,10.98,11.65,16.39,13.84,12.36,35.88,36.78,42.61,3.17.87,7.18,1.48,10.46,1.86,8.8,1,17.75.97,26.34-1.36-1.33,10.46,2.01,23.03.63,33.13-1.73,12.67-12.87,7.87-20.64,5.02C47.98,315.48,3.66,251.72,0,184.88v-20.53Z" />
+              </svg>
             </a>
-          </li>
-          <li className="nav-item px-4">
-            <a className="nav-link" href="/contact">
-              Contact
+            <a
+              className="contact-btn contact-img"
+              href="mailto:lydia.g.ritchie@gmail.com"
+              aria-label="Email"
+              title="Email me at lydia.g.ritchie@gmail.com"
+            >
+              <svg
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 384.17"
+                alt="Email Icon"
+                width={30}
+              >
+                <g>
+                  <path d="M336.13,2C242.38-.51,148.19,1.61,54.28.92,25.93,3.35,3.75,25.33,0,53.31v278.46c1.11,3.67,1.51,7.53,2.61,11.24,5.23,17.57,20.97,33.32,38.55,38.55,3.71,1.1,7.56,1.5,11.24,2.61h278.46c27.39-2.67,50.44-26.98,52.39-54.28l.04-273.99c-1.9-26.37-21.26-48.63-47.15-53.9ZM312.92,256.57c-.96,11.09-10.24,20.37-21.33,21.33H91.67c-10.91-.94-19.88-9.84-21.3-20.62V127.8c1.4-10.22,9.15-18.36,19.27-20.4l201.94-.22c9.25.8,16.95,7.22,20.16,15.77,2.66,44.24.37,89.14,1.17,133.62Z" />
+                  <path d="M294.92,134.15v122.39c0,.21-2.49,2.46-3.01,2.98l-198.76.43c-1.2.6-4.83-3.1-4.83-3.41v-122.39l99.25,78.52c2.33,1.18,5.17,1.2,7.59.24l99.75-78.77Z" />
+                  <polygon points="276.96 125.17 191.35 193.24 106.29 125.17 276.96 125.17" />
+                </g>
+              </svg>
             </a>
-          </li>
-        </ul>
+            <a
+              className="contact-btn contact-img"
+              href="https://www.instagram.com/lydiaritchieart/"
+              aria-label="Instagram Profile"
+              title="Visit my Instagram profile"
+            >
+              <svg
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 384"
+                alt="Insta Icon"
+                width={30}
+              >
+                <g>
+                  <path d="M381.53,107.85c-9.92-52.22-53.09-95.41-105.12-105.37-5.5-1.05-11.17-1.24-16.61-2.47H125.14l-1.19.69C59.05,4.43,5.31,60.11.94,124.5c-2.97,43.79,2.22,90.87,0,135,1.23,5.45,1.42,11.14,2.47,16.65,9.94,52.13,53.07,95.44,105.12,105.38,5.5,1.05,11.17,1.24,16.61,2.47h134.67c5.44-1.23,11.12-1.42,16.61-2.47,49.19-9.42,90.45-48.43,103.03-96.96l4.55-25.07V124.5c-1.23-5.46-1.42-11.14-2.47-16.65ZM294.25,256.15c-1.54,19.47-17.86,35.6-37.07,37.84l-128.7.04c-19.75-2.12-35.28-17.38-37.74-37.16l.08-130.4c2.67-18.77,17-33.28,35.64-36.27l130.72-.18c19.39,2.41,34.62,17.64,37.03,37.12-2.46,41.87,3.31,87.59.04,129.01Z" />
+                  <path d="M139.93,108.21c33.42,1.81,70.8-3.14,103.78-.2,17.51,1.56,30.98,15.03,32.54,32.62,2.89,32.5-2.16,69.08.04,102.01-1.45,17.94-14.54,31.72-32.58,33.34-32.42,2.89-68.91-2.16-101.76.04-17.84-1.38-31.66-14.69-33.25-32.66-2.92-32.9,2.09-70.06.08-103.4,1.81-16.85,14.4-29.68,31.16-31.76ZM247.63,123.17c-10.64,2.17-10.37,19.07.62,20.78,16.93,2.63,16.36-24.24-.62-20.78ZM184.08,138.21c-37.14,4.45-56.85,48.29-38.87,80.54,23.38,41.93,88.19,33.96,99.58-12.93,9.49-39.05-21.21-72.35-60.71-67.61Z" />
+                  <path d="M187.82,156.21c43.83-5.29,56.54,58.27,14.78,70.31-49.78,14.36-64.45-64.31-14.78-70.31Z" />
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
       </nav>
 
       <nav
-        className="navbar navbar-expand-lg navbar-light d-sm-none d-flex col px-3"
-        style={{ backgroundColor: bgColor }}
+        className="navbar navbar-expand-lg navbar-light d-sm-none d-flex row px-3"
+        style={{ backgroundColor: bgColor, overflow: "hidden", width: "100%", margin: "0px" }}
       >
         <button
-          className="py-2 p-0"
+          className="py-2 p-0 col-1"
           type="button"
           data-toggle="collapse"
           data-target="#smallNavBar"
@@ -47,10 +137,113 @@ export function NavBar({ bgColor }) {
           onClick={toggleMenu}
           style={{ backgroundColor: "transparent", border: "0px" }}
         >
-          <span className="navbar-toggler-icon"></span>
+          <span
+            className="navbar-toggler-icon"
+            style={{ backgroundColor: "transparent", border: "0px" }}
+          ></span>
         </button>
 
-        <div className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`} id="smallNavBar">
+        <div className="col-7" style={{ backgroundColor: "" }}>
+          <img
+            className=""
+            style={{
+              width: "25%",
+              backgroundColor: "",
+              marginLeft: "31vw",
+              marginTop: "1vh",
+              marginBottom: "10px"
+            }}
+            src={lydiaRitchieVertical}
+            alt="Lydia Ritchie Logo"
+          />
+        </div>
+
+        <div className="col-4">
+          {/* Contact Buttons */}
+          <div className="d-flex  justify-content-end">
+            <a
+              className="contact-btn contact-img"
+              href="https://www.linkedin.com/in/lydia-g-ritchie/"
+              aria-label="LinkedIn Profile"
+              title="Visit my LinkedIn profile"
+            >
+              <svg
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1199.94 1200"
+                alt="LinkedIn Icon"
+                width={20}
+              >
+                <path d="M1080.94,0H118.99v1h0,0c-17.82-1.09-35.43,5.51-50.91,14.03C31.35,35.28.91,75.05,0,118c-.2,1.6.13,3.37,0,5v959c3.69,60.8,57.29,114.22,117.99,118h962.95v-1c17.26,1.45,33.86-4.44,48.94-12.59,38.25-20.67,67.74-60.31,70.06-104.41V119c-2.97-61.34-57.7-116.08-118.99-119ZM362.98,1033h-178.99V456h178.99v577ZM339.45,355.97c-58.37,48.92-148.57,19.12-168.72-53.21-17.13-61.49,24.13-129.22,89.05-135.47,106.83-10.28,160.43,121,79.67,188.68ZM1032.94,1033h-177.99l.04-320.54c-3.83-74.22-41.69-123.55-121.26-110.19-57.32,9.63-81.8,59.61-84.81,113.19l.04,317.54h-171.99V456h171.99v76c5.42-7.07,10.31-14.6,16.02-21.47,55.89-67.28,146.07-87.21,228.96-63.02,92.36,26.96,134.65,108.01,139.04,199.95l-.05,385.55ZM1080.94,1199h0Z" />
+              </svg>
+            </a>
+            <a
+              className="contact-btn contact-img"
+              href="https://github.com/lydiaritchie"
+              aria-label="GitHub Profile"
+              title="Visit my Github profile"
+            >
+              <svg
+                id="github-icon"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 350.44 342.1"
+                alt="Github Icon"
+                width={20}
+              >
+                <path d="M0,164.35C8.54,37.49,146.06-40.15,259.39,21.65c92.6,50.49,119.88,172.13,57.07,257.62-19.06,25.94-52.13,52.63-83.41,61.68-6.26,1.81-11.06,2.3-13.91-4.62-.96-17.11.79-34.87-.11-51.9-.64-12.02-3.12-22.89-11.66-31.79,28.37-2.56,57.84-13.36,70.61-40.61,13.04-27.82,13.73-69.43-8.88-92.6,4.24-11.39,4.39-24.09,1.58-35.84-.42-1.77-2.76-9.85-3.78-10.59-3.44-2.52-14.17,1.02-18.14,2.37-10.49,3.58-20,9.47-29.47,15.07-29.08-7.01-58.52-7.51-87.55.06-14.72-7.93-31.34-19.2-48.83-17.75-5.55,15.29-7.57,31.18-1.6,46.69-20.89,21.58-21.51,56.68-12.37,83.77,11.55,34.22,40.44,45.78,74.1,49.77-6.81,6.38-9.3,14.87-11.39,23.67-14,5.34-29.61,7.09-41.62-3.5-7.1-6.25-10.04-15.69-17.83-21.86-6.13-4.86-18.23-10.81-25.35-5.49-2.03,3.83,8.65,9.68,10.98,11.65,16.39,13.84,12.36,35.88,36.78,42.61,3.17.87,7.18,1.48,10.46,1.86,8.8,1,17.75.97,26.34-1.36-1.33,10.46,2.01,23.03.63,33.13-1.73,12.67-12.87,7.87-20.64,5.02C47.98,315.48,3.66,251.72,0,184.88v-20.53Z" />
+              </svg>
+            </a>
+            <a
+              className="contact-btn contact-img"
+              href="mailto:lydia.g.ritchie@gmail.com"
+              aria-label="Email"
+              title="Email me at lydia.g.ritchie@gmail.com"
+            >
+              <svg
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 384.17"
+                alt="Email Icon"
+                width={20}
+              >
+                <g>
+                  <path d="M336.13,2C242.38-.51,148.19,1.61,54.28.92,25.93,3.35,3.75,25.33,0,53.31v278.46c1.11,3.67,1.51,7.53,2.61,11.24,5.23,17.57,20.97,33.32,38.55,38.55,3.71,1.1,7.56,1.5,11.24,2.61h278.46c27.39-2.67,50.44-26.98,52.39-54.28l.04-273.99c-1.9-26.37-21.26-48.63-47.15-53.9ZM312.92,256.57c-.96,11.09-10.24,20.37-21.33,21.33H91.67c-10.91-.94-19.88-9.84-21.3-20.62V127.8c1.4-10.22,9.15-18.36,19.27-20.4l201.94-.22c9.25.8,16.95,7.22,20.16,15.77,2.66,44.24.37,89.14,1.17,133.62Z" />
+                  <path d="M294.92,134.15v122.39c0,.21-2.49,2.46-3.01,2.98l-198.76.43c-1.2.6-4.83-3.1-4.83-3.41v-122.39l99.25,78.52c2.33,1.18,5.17,1.2,7.59.24l99.75-78.77Z" />
+                  <polygon points="276.96 125.17 191.35 193.24 106.29 125.17 276.96 125.17" />
+                </g>
+              </svg>
+            </a>
+            <a
+              className="contact-btn contact-img"
+              href="https://www.instagram.com/lydiaritchieart/"
+              aria-label="Instagram Profile"
+              title="Visit my Instagram profile"
+            >
+              <svg
+                id="Layer_1"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 384"
+                alt="Insta Icon"
+                width={20}
+              >
+                <g>
+                  <path d="M381.53,107.85c-9.92-52.22-53.09-95.41-105.12-105.37-5.5-1.05-11.17-1.24-16.61-2.47H125.14l-1.19.69C59.05,4.43,5.31,60.11.94,124.5c-2.97,43.79,2.22,90.87,0,135,1.23,5.45,1.42,11.14,2.47,16.65,9.94,52.13,53.07,95.44,105.12,105.38,5.5,1.05,11.17,1.24,16.61,2.47h134.67c5.44-1.23,11.12-1.42,16.61-2.47,49.19-9.42,90.45-48.43,103.03-96.96l4.55-25.07V124.5c-1.23-5.46-1.42-11.14-2.47-16.65ZM294.25,256.15c-1.54,19.47-17.86,35.6-37.07,37.84l-128.7.04c-19.75-2.12-35.28-17.38-37.74-37.16l.08-130.4c2.67-18.77,17-33.28,35.64-36.27l130.72-.18c19.39,2.41,34.62,17.64,37.03,37.12-2.46,41.87,3.31,87.59.04,129.01Z" />
+                  <path d="M139.93,108.21c33.42,1.81,70.8-3.14,103.78-.2,17.51,1.56,30.98,15.03,32.54,32.62,2.89,32.5-2.16,69.08.04,102.01-1.45,17.94-14.54,31.72-32.58,33.34-32.42,2.89-68.91-2.16-101.76.04-17.84-1.38-31.66-14.69-33.25-32.66-2.92-32.9,2.09-70.06.08-103.4,1.81-16.85,14.4-29.68,31.16-31.76ZM247.63,123.17c-10.64,2.17-10.37,19.07.62,20.78,16.93,2.63,16.36-24.24-.62-20.78ZM184.08,138.21c-37.14,4.45-56.85,48.29-38.87,80.54,23.38,41.93,88.19,33.96,99.58-12.93,9.49-39.05-21.21-72.35-60.71-67.61Z" />
+                  <path d="M187.82,156.21c43.83-5.29,56.54,58.27,14.78,70.31-49.78,14.36-64.45-64.31-14.78-70.31Z" />
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div
+          className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
+          id="smallNavBar"
+        >
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item active">
               <a className="nav-link" href="/">
@@ -63,8 +256,8 @@ export function NavBar({ bgColor }) {
               </a>
             </li>
             <li className="nav-item active">
-              <a className="nav-link" href="/contact">
-                Contact
+              <a className="nav-link" href="/about">
+                About
               </a>
             </li>
           </ul>

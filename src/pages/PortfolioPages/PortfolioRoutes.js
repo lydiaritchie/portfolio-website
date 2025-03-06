@@ -41,7 +41,7 @@ export function Portfolio() {
           style={{ width: "fit-content" }}
         >
           <NavLink
-            className={`nav-link rounded-pill portfolio-btn ${
+            className={`portfolio-nav-link rounded-pill portfolio-btn ${
               webDevStatus ? "portfolio-btn-selected" : ""
             }`}
             to="web-development"
@@ -49,7 +49,7 @@ export function Portfolio() {
             Web Development
           </NavLink>
           <NavLink
-            className={`nav-link rounded-pill portfolio-btn ${
+            className={`portfolio-nav-link rounded-pill portfolio-btn ${
               designStatus ? "portfolio-btn-selected" : ""
             }`}
             to="design"
@@ -57,7 +57,7 @@ export function Portfolio() {
             Design
           </NavLink>
           <NavLink
-            className={`nav-link rounded-pill portfolio-btn ${
+            className={`portfolio-nav-link rounded-pill portfolio-btn ${
               potteryStatus ? "portfolio-btn-selected" : ""
             }`}
             to="pottery"
