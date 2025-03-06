@@ -78,7 +78,7 @@ function DesignPortfolio() {
                       overflow: "hidden", // Prevents the scaled image from overflowing outside its container
                     }}
                   >
-                    <div class="loader"></div>
+                    <span class="loader"></span>
                     <img
                       src={item.image}
                       srcSet={`

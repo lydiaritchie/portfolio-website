@@ -369,6 +369,7 @@ footer {
 .design-item {
   break-inside: avoid;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .design-img {
